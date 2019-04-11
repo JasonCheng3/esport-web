@@ -1,0 +1,54 @@
+body {
+/*  padding: 50px;*/
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+
+
+.img-dicord-icon {
+	width: 45px;
+}
+
+.img-dicord-red{
+	width: 45px;
+	border-radius: 30px;
+	cursor: pointer;
+}
+
+.flex-child-left {
+	width: 280px;
+}
+.wrapper-nav {
+}
+.nav {
+	flex: 1;
+}
+.navbar {
+	flex: 1 1 auto;
+	margin: 0 auto;
+    max-width: 1300px;
+}
+a {
+  color: white;
+}
+a:hover {
+	color: #00B7FF;
+}
+
+.content-wraper {
+  flex: 1 1 auto;
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+.content-left {
+
+
+}
+.content-right {
+
+}
+
+.wraper-space {
+
+}
