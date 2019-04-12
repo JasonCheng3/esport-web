@@ -16,22 +16,20 @@ body {
 .flex-child-left {
   width: 280px;
 }
-
+.wrapper-nav {
+}
 .nav {
   flex: 1;
 }
-
 .navbar {
   flex: 1 1 auto;
   margin: 0 auto;
   max-width: 1300px;
   height: 10vh;
 }
-
 a {
   color: white;
 }
-
 a:hover {
   color: #00b7ff;
 }
@@ -59,7 +57,6 @@ a:hover {
   z-index: 2;
   justify-content: flex-end;
 }
-
 .content-right {
   -webkit-box-flex: 1;
   background-color: #36393f;
@@ -78,11 +75,9 @@ a:hover {
   max-width: 1000px;
   padding: 40px 20px;
 }
-
 .content-right-flex-title {
   color: #ffffff;
 }
-
 .content-left-flex {
   display: flex;
   justify-content: flex-end;
@@ -106,43 +101,20 @@ a:hover {
 }
 
 .container {
-  padding-right: 0;
-  padding-left: 0;
-  margin-right: 0;
-  margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
 }
-
 .insert-pic {
-  background-image: url(../images/discord_red.png);
-  background-size: 100% 100%;
-  border-radius: 30px;
+    background-image: url(../images/discord_red.png);
+    background-size: 100% 100%;
+    border-radius: 30px;
 }
 
 .insert-size {
-  width: 45px;
-  height: 27px;
+    width: 45px;
+    height: 27px;
 }
+@import "abstracts/mixins";
 
-/*
-0 - 600 px :        phone
-600 - 900px:        Tablet portrait
-900 - 1200px:       Tablet landscape
-[1200 - 1800] :     is where oue normal styles apply
-1800px + :          Big desktop
-
-*/
-/*
-$breakpoint arguement choices:
-- phone
-- tab-port
-- tab-land
-- big-desktop
-1em = 16px
-*/
-@media (max-width: 50em) {
-  .content-left {
-    display: none;
-  }
-}
-
-/*# sourceMappingURL=style.css.map */
