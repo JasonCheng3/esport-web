@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title><%= title %></title>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
+
 <body>
   <% include nav %>
   <div class="content-wraper">
-      <div class="wraper-space">
-        
+    <!-- <div class="wraper-space">
+
+    </div> -->
+    <div class="content-left">
+      <div class="left-flex">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" tabindex="-1">Disabled</a>
+          </li>
+        </ul>
       </div>
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Active</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-          <ul>Change log
+
+    </div>
+
+    <!-- <ul>Change log
             <li>Legal</li>
             <li>Reference</li>
-          </ul>
+          </ul> -->
 
 
 
@@ -49,6 +58,7 @@
   <p>Welcome to <%= title %></p>
 -->
 
-<% include footer %>
+  <% include footer %>
 </body>
+
 </html>
