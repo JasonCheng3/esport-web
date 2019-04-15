@@ -3,126 +3,6 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-.img-dicord-icon {
-  width: 45px;
-}
-
-.img-dicord-red {
-  width: 45px;
-  border-radius: 30px;
-  cursor: pointer;
-}
-
-.flex-child-left {
-  width: 280px;
-}
-
-.nav {
-  flex: 1;
-}
-
-.navbar {
-  flex: 1 1 auto;
-  margin: 0 auto;
-  max-width: 1300px;
-  height: 10vh;
-}
-
-a {
-  color: white;
-}
-
-a:hover {
-  color: #00b7ff;
-}
-
-.content-wraper {
-  display: flex;
-  flex: 1 1 100%;
-  margin: 0 auto;
-  /* max-width: 1300px; */
-  height: 90vh;
-}
-
-.content-left {
-  -webkit-box-flex: 1;
-  -webkit-box-sizing: border-box;
-  background-color: #2f3136;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex: 1 0 300px;
-  min-width: 250px;
-  overflow: hidden;
-  position: relative;
-  z-index: 2;
-  justify-content: flex-end;
-}
-
-.content-right {
-  -webkit-box-flex: 1;
-  background-color: #36393f;
-  flex: 1 1 1000px;
-  overflow: hidden;
-  z-index: 2;
-  display: flex;
-  height: 100%;
-  min-height: 1px;
-}
-
-.content-right-flex {
-  box-sizing: border-box;
-  flex: 1 1 auto;
-  flex-direction: column;
-  max-width: 1000px;
-  padding: 40px 20px;
-}
-
-.content-right-flex-title {
-  color: #ffffff;
-}
-
-.content-left-flex {
-  display: flex;
-  justify-content: flex-end;
-  min-width: 300px;
-  padding: 40px 5px 40px 20px;
-}
-
-.content-right-flex-detail {
-  display: flex;
-}
-
-.content-right-square {
-  -ms-flex: 0 0 auto;
-  -webkit-box-flex: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  flex: 0 0 auto;
-  height: auto;
-  padding: 16px 0 0 16px;
-  width: 20%;
-}
-
-.container {
-  padding-right: 0;
-  padding-left: 0;
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.insert-pic {
-  background-image: url(../images/discord_red.png);
-  background-size: 100% 100%;
-  border-radius: 30px;
-}
-
-.insert-size {
-  width: 45px;
-  height: 27px;
-}
-
 /*
 0 - 600 px :        phone
 600 - 900px:        Tablet portrait
@@ -145,4 +25,189 @@ $breakpoint arguement choices:
   }
 }
 
+.nav {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.navbar {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin: 0 auto;
+  max-width: 1300px;
+  height: 10vh;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: #00b7ff;
+}
+
+.img-dicord-icon {
+  width: 45px;
+}
+
+.img-dicord-red {
+  width: 45px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.flex-child-left {
+  width: 280px;
+}
+
+.container {
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.content-wraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  margin: 0 auto;
+  /* max-width: 1300px; */
+  height: 90vh;
+}
+
+.content-left {
+  -webkit-box-flex: 1;
+  -webkit-box-sizing: border-box;
+  background-color: #2f3136;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: 1 0 300px;
+      flex: 1 0 300px;
+  min-width: 250px;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.content-right {
+  -webkit-box-flex: 1;
+  background-color: #36393f;
+  -ms-flex: 1 1 1000px;
+      flex: 1 1 1000px;
+  overflow: hidden;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  min-height: 1px;
+}
+
+.content-right-flex {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 1000px;
+  padding: 40px 20px;
+}
+
+.content-right-flex-title {
+  color: #ffffff;
+}
+
+.content-left-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  min-width: 300px;
+  padding: 40px 5px 40px 20px;
+}
+
+.content-right-flex-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content-right-square {
+  -ms-flex: 0 0 auto;
+  -webkit-box-flex: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  height: auto;
+  padding: 16px 0 0 16px;
+  width: 20%;
+}
+
+.insert-pic {
+  background-image: url(../images/discord_red.png);
+  background-size: 100% 100%;
+  border-radius: 30px;
+}
+
+.insert-size {
+  width: 45px;
+  height: 27px;
+}
+
+@media (max-width: 800px) {
+  .content-left {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: baseline;
+        -ms-flex-pack: baseline;
+            justify-content: baseline;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .content-wraper {
+    height: auto;
+  }
+  .content-right-flex-detail {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .column-width {
+    width: 62%;
+    margin-bottom: 3em;
+  }
+}
 /*# sourceMappingURL=style.css.map */
