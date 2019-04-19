@@ -35,3 +35,13 @@ a:hover {
 .flex-child-left {
   width: 280px;
 }
+.dropdown-toggle::after  {
+  display: none;
+}
+
+.li::after {
+  display: none;
+}
+.dropdown-menu  {
+  transform: translate(-115px);
+}

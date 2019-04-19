@@ -6,7 +6,7 @@
 }
 
 // nav 下方內容-->外層
-.content-wraper {
+.main-wraper {
   display: flex;
   flex: 1 1 100%;
   margin: 0 auto;
@@ -106,7 +106,7 @@
     justify-content: baseline;
     align-items: center;
   }
-  .content-wraper {
+  .main-wraper {
     height: auto;
   }
   .content-right-flex-detail {

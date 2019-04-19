@@ -1,127 +1,70 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Express</title>
 
-<head>
-  <title><%= title %></title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
+  <body onload="loadSession()">
+    <% include nav %>
+    <script>
+      function loadSession() {
+        var session = JSON.parse("<%- session %>");
+        if (typeof session.userid !== "undefined") {
+          document.getElementById("disId").innerHTML =
+            '<li class="nav-item dropdown clearfix insert-pic" id="disId">\
+              <a class="nav-link dropdown-toggle insert-size" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"></a>\
+              <div class="dropdown-menu">\
+                <a class="dropdown-item" href="#" onclick="">profile</a>\
+                <a class="dropdown-item" href="#" onclick="clearSession()">logout</a>\
+              </div>\
+            </li>';
+          //session.userid;
+        } else {
+          document.getElementById("disId").innerHTML =
+            '<a class="nav-link" href="auth">Discord登入</a>';
+        }
+        // 抓取session
+        console.log(session);
+        var userSession = JSON.stringify(session);
+        localStorage.setItem("AccessUser", userSession); // 寫進localstorage
 
-<body>
-  <% include nav %>
-  <div class="content-wraper">
-    <div class="content-left">
-      <div class="content-left-flex">
-        <!-- <div class="content-left-flex-word">
-            Welcome!
-            
-              This site is home to all development on Discord. Bring bots to life with our API and invite them to join
-              your community.
-              Find the perfect feature set for your game in our Game SDK, and sign up for Server Commerce to start selling
-              directly in your server.
-              Get started by creating a new application. We can't wait to see what you make!
-            
-        </div> -->
+        var getUser = localStorage.getItem("AccessUser"); // 取值
+        var getUserAry = JSON.parse(getUser); // 把string 包成 object
+        var savelocation = getUserAry["token"]; // token
 
+        // 1. localStorage 有 session 無
+        // 2. localStorage 無 session 有
+        // 3. localStorage 無 session 無
+        if (
+          typeof session.userid == "undefined" &&
+          typeof getUser !== "undefined"
+        ) {
+          window.location = "http://localhost:3000/token/" + savelocation;
+        } else if (
+          typeof session.userid !== "undefined" &&
+          typeof getUser == "undefined"
+        ) {
+          window.location = "http://localhost:3000/auth/";
+        } else if (
+          typeof session.userid == "undefined" &&
+          typeof getUser == "undefined"
+        ) {
+          window.location = "http://localhost:3000/auth/";
+        }
 
-        <ul class="nav flex-column">
+        if (session.hasOwnProperty("token")) {
+        }
+      }
+    </script>
 
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Active</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" tabindex="-1">Disabled</a>
-          </li>
-        </ul>
-
-      </div>
-
-    </div>
-
-    <!-- <ul>Change log
-            <li>Legal</li>
-            <li>Reference</li>
-          </ul> -->
-
-
-
-    <div class="content-right">
-      <div class="content-right-flex">
-        <div class="content-right-flex-wraper">
-          <div class="content-right-flex-title">
-            <h2>MY APPLICATIONS</h2>
-          </div>
-          <div class="content-right-flex-detail">
-     
-              <div class="row">
-
-                <div class="col-md-3 column-width">
-                  <div class="card">
-                    <img class="card-img-top" src="images/discord_red.png">
-                    <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the
-                        card's content.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 column-width">
-                  <div class="card">
-                    <img class="card-img-top" src="images/discord_red.png">
-                    <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the
-                        card's content.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 column-width">
-                  <div class="card">
-                    <img class="card-img-top" src="images/discord_red.png">
-                    <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the
-                        card's content.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 column-width">
-                  <div class="card">
-                    <img class="card-img-top" src="images/discord_red.png">
-                    <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the
-                        card's content.</p>
-                    </div>
-                  </div>
-                </div>
-
-
-              </div>
-      
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-
-
-
-  <!--     <h1><%= title %></h1>
-  <p>Welcome to <%= title %></p>
--->
-
-  <% include footer %>
-</body>
-
+    <% include main %> <% include footer %>
+  </body>
 </html>

@@ -7,11 +7,16 @@
     "watch:sass": "sass --watch sass/main.scss public/stylesheets/style.css -w"
   },
   "dependencies": {
+    "btoa": "^1.2.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "ejs": "~2.5.7",
     "express": "~4.16.0",
+    "express-session": "^1.16.1",
     "http-errors": "~1.6.2",
-    "morgan": "~1.9.0"
+    "morgan": "~1.9.0",
+    "node-fetch": "^2.3.0",
+    "socket.io": "^2.2.0",
+    "sqlite": "^3.0.1"
   }
 }

@@ -1,5 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
+var session = require('express-session');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -19,8 +20,19 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+  key: 'session',
+  secret: 'keyboard cat',
+  cookie: {maxAge: 1000 * 60 * 60 * 24}, // 1day
+  resave: false,
+  saveUninitialized: true,
+}));
+
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/auth', require('./routes/auth'));
+app.use('/token', require('./routes/token'));
 
 //use image
 app.use(express.static('public'));

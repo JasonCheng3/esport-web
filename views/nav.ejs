@@ -1,33 +1,38 @@
 <div class="wrapper-nav bg-dark">
   <nav class="navbar navbar-expand navbar-dark ">
     <div class="flex-child-left">
-    <img class="img-dicord-icon" src="images/Discord-Logo-White.png">
-    <a class="navbar-brand" href="#">超競實驗室</a>
+      <img class="img-dicord-icon" src="images/Discord-Logo-White.png" />
+      <a class="navbar-brand" href="#">超競實驗室</a>
     </div>
 
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Applications</a>
+      </li>
 
-  <ul class="nav nav-pills">
-    <li class="nav-item">
-      <a class="nav-link" href="#">Applications</a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link" href="#">Teams</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#" tabindex="-1">Documentation</a>
-    </li>
-  </ul>
-  <li class="nav-item dropdown clearfix insert-pic">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Teams</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" tabindex="-1">Documentation</a>
+      </li>
+    </ul>
+    <li id="disId"></li>
+    <!-- <li class="nav-item dropdown clearfix insert-pic" id="disId">
     <a class="nav-link dropdown-toggle insert-size" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"></a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">profile</a>
-      <a class="dropdown-item" href="#">logout</a>
+      <a class="dropdown-item" href="#" onclick="">profile</a>
+      <a class="dropdown-item" href="#" onclick="clearSession()">logout</a>
     </div>
-  </li>
-  <img class="img-dicord-red" src="images/discord_red.png">
+  </li> -->
+    <!-- <img class="img-dicord-red" src="images/discord_red.png"> -->
   </nav>
 </div>
 <script>
 
+
+  function clearSession() {
+    localStorage.clear();
+    sessionStorage.clear();
+  }
 </script>
