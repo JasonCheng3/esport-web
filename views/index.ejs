@@ -16,7 +16,7 @@
     <% include nav %>
     <script>
       function loadSession() {
-        var session = JSON.parse("<%- session %>");
+        var session = JSON.parse('<%- session %>');
         if (typeof session.userid !== "undefined") {
           document.getElementById("disId").innerHTML =
             '<li class="nav-item dropdown clearfix insert-pic" id="disId">\
@@ -32,7 +32,7 @@
             '<a class="nav-link" href="auth">Discord登入</a>';
         }
         // 抓取session
-        console.log(session);
+        // console.log(session);
         var userSession = JSON.stringify(session);
         localStorage.setItem("AccessUser", userSession); // 寫進localstorage
 
@@ -42,12 +42,12 @@
 
         // 1. localStorage 有 session 無
         // 2. localStorage 無 session 有
-        // 3. localStorage 無 session 無
+        // 3. localStorage 無 session 無 
         if (
           typeof session.userid == "undefined" &&
           typeof getUser !== "undefined"
         ) {
-          window.location = "http://localhost:3000/token/" + savelocation;
+          // window.location = "http://localhost:3000/token/" + savelocation;
         } else if (
           typeof session.userid !== "undefined" &&
           typeof getUser == "undefined"
@@ -59,12 +59,15 @@
         ) {
           window.location = "http://localhost:3000/auth/";
         }
+        if (session.hasOwnProperty("token")) {
+        }
 
         if (session.hasOwnProperty("token")) {
         }
       }
     </script>
 
-    <% include main %> <% include footer %>
+    <% include main %>
+    <% include footer %>
   </body>
 </html>
