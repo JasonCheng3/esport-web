@@ -33,7 +33,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth', require('./routes/auth'));
 app.use('/token', require('./routes/token'));
-
+app.use('/logout', require('./routes/logout'));
 //use image
 app.use(express.static('public'));
 

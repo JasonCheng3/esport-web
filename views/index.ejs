@@ -31,8 +31,6 @@
           document.getElementById("disId").innerHTML =
             '<a class="nav-link" href="auth">Discord登入</a>';
         }
-        // 抓取session
-        // console.log(session);
         var userSession = JSON.stringify(session);
         localStorage.setItem("AccessUser", userSession); // 寫進localstorage
 

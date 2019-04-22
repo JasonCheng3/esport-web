@@ -34,7 +34,6 @@ router.get('/callback', catchAsync(async (req, res) => {
       },
     });
   const jsonDiscordAuth = await fetchDiscordAuth.json();
-  console.log(jsonDiscordAuth);
   req.session.token = `${jsonDiscordAuth.access_token}`;
 
   const fetchDiscordUserInfo = await fetch(URL_DISCORD_USER, {
@@ -43,7 +42,6 @@ router.get('/callback', catchAsync(async (req, res) => {
     }
   });
   const jsonDiscordUserInfo = await fetchDiscordUserInfo.json();
-  // console.log(jsonDiscordUserInfo);
   req.session.userid = `${jsonDiscordUserInfo.id}`;
   req.session.username = `${jsonDiscordUserInfo.username}`;
 
